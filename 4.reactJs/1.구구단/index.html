@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>구구단</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            class Gugudan extends React.Component{
+                constructor(props){
+                    super(props)
+                    this.state={
+                        first:Math.ceil(Math.random()*9),
+                        second:Math.ceil(Math.random()*9),
+                        value:'',
+                        result:''
+                    }
+                }
+
+                onSubmit =(e)=>{
+                    e.preventDefault();
+                    this.hello.focus() //원래는 document.querySelector('input').focus()를 해야하지만, 리액트에서는 document.을 최대한 안 쓰는 게 좋다.
+                    if(parseInt(this.state.value)===this.state.first*this.state.second){
+                        this.setState((prevState)=>{
+                            return{
+                                result:`${prevState.value}정답`, //아래 오답과 비교 prevState를 넣은 것 자기 자신이 다시 오는 거라면 함수안에 넣어 써주는 게 좋아.
+                                first:Math.ceil(Math.random()*9),
+                                second:Math.ceil(Math.random()*9),
+                                value:''
+                            }   
+                        })
+                    }else{
+                        this.setState({
+                            result:`${this.state.value}오답`,
+                            value:''
+                        })
+                    }
+                }
+
+                onChange=(e)=>{
+                    this.setState({value:e.target.value})
+                }
+
+                hello;
+                onHello=(c)=>{
+                    this.hello=c;
+                }
+
+                render(){
+                    return (
+                        <div>
+                            <div>{this.state.first}X{this.state.second}=?</div>
+                            <form onSubmit={this.onSubmit}>
+                                <input ref={this.onHello} type="Number" value={this.state.value} onChange={this.onChange}></input>
+                                <button type="submit">
+                                입력
+                                </button>
+                            </form>
+                            <div>{this.state.result}</div>
+                        </div>
+                    )
+                }
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<React.Fragment>
+                <Gugudan/>
+                <Gugudan/>
+                <Gugudan/>
+                <Gugudan/>
+                <Gugudan/>
+                </React.Fragment>,document.querySelector("#root"))
+        </script>
+    </body>
+</html>

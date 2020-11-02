@@ -1,0 +1,204 @@
+.blind{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+body, 
+html{
+    margin:0;
+    padding:0;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.relative{
+    position: relative;
+}
+
+.center-align{
+    margin: 0 auto;
+    width:1080px;
+    width: 100%;
+}
+
+header,
+main,
+footer{
+    width:1080px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+
+header{
+    height: 195px;
+}
+
+main{
+    height: 2240px;
+}
+
+footer{
+    height: 223px;
+}
+
+#header-start{
+    text-decoration: none;
+    font-size:12px;
+    color:grey;
+    position: absolute;
+    top:0;
+    left:0;
+    float: left;
+}
+
+#header-start:hover{
+    text-decoration: underline;
+}
+
+#header-logo{
+    background-image: url(./daumLogo.png);
+    background-repeat: no-repeat;
+    width:180px;
+    height: 94px;
+    display: inline-block;
+    background-position: -111px -44px;
+    position: relative;
+    top: -18px;
+    float: left;
+}
+
+header fieldset{
+    width:545px;
+    height:46px;
+    color:#333;
+    position: relative;
+    padding:0;
+}
+
+header fieldset button{
+    position: absolute;
+    top:0;
+    right: 0;
+    background-image: url(./daumAll.png);
+    background-repeat: no-repeat;
+    width: 41px;
+    height: 46px;
+    border:0;
+    padding:0;
+}
+
+header form fieldset input{
+    font-size:22px;
+    position: relative;
+    top: 10px;
+    left: 8px;
+    width: 450px;
+    outline: none;
+    border:none;
+}
+
+#search-bottom a{
+    font-size: 12px;
+    color:grey;
+    text-decoration: none;
+    padding-left:8px;
+}
+
+#search-bottom a:hover{
+    text-decoration: underline;
+}
+
+header ul{
+    padding:0;
+    margin:0;
+    display: inline-block;
+    margin:10px;
+}
+
+header li{
+    list-style: none;
+    display: inline-block;
+    margin:0;
+    padding:0;
+    font-size: 15px;
+}
+
+header li a{
+    color:black;
+    text-decoration: none;
+}
+
+header li a:hover{
+    text-decoration: underline;
+}
+
+#main-top{
+    width:1080px;
+    height: 160px;
+}
+
+#main-mid{
+    width:1080px;
+    height: 1600px;
+}
+
+#main-bottom{
+    width: 1080px;
+    height: 460px;
+    background-image: url(./daumAll.png);
+}
+
+#main-first-ad{
+    width: 655px;
+    height: 120px;
+    display: inline-block;
+    margin: 20px;
+}
+
+#main-first-ad a{
+    background-image: url(./daumAll.png);
+    width: 655px;
+    height: 120px;
+    display: inline-block;
+}
+
+#main-login{
+    width: 300px;
+    height: 120px;
+    background-color: #ccc;
+    display: inline-block;
+    float: right;
+    margin: 20px;
+    position: relative;
+}
+
+#kakao, 
+#daum{
+    width: 270px;
+    height: 36px;
+    background-image: url(./daumAll.png);
+    display: inline-block;
+    position: relative;
+    top: 18px;
+    left: 11px;
+}
+
+#signIn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
+}
+
+#signIn:hover{
+    text-decoration: underline;
+}
+

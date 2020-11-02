@@ -1,0 +1,22 @@
+body{
+    background-color: peru;
+}
+
+#result{
+    border: 1px solid black;
+    width: 93px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    left:37px;
+}
+
+body button{
+    width:30px;
+    height: 30px;
+}
+
+#input{
+    width: 93px;
+    height: 23px;
+}

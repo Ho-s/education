@@ -1,0 +1,15 @@
+#input{
+    height: 30px;
+    width: 180px;
+    border:1px solid black;
+    padding:0;
+    font-size:24px;
+}
+
+#logs{
+    width:210px;
+    height: 600px;
+    border: 1px solid black;
+    margin-top:10px;
+    font-size: 27px;
+}
