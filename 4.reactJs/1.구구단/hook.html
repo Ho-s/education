@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>구구단</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+            // const gugudan = () => { //ref나 setState를 사용하지 않는 경우 그냥 함수
+            //     return <div>Hello, Hooks</div>
+            // }
+            const Gugudan = () => { 
+                const [first,setFirst]=React.useState(Math.ceil(Math.random()*9))
+                const [second,setSecond]=React.useState(Math.ceil(Math.random()*9))
+                const [value,setValue]=React.useState('')
+                const [result,setResult]=React.useState('')
+                const inputRef=React.useRef(null)
+
+                const onSubmit =(e)=>{
+                    e.preventDefault();
+                    inputRef.current.focus() 
+                    if(parseInt(value)===first*second){
+                            setResult(`${value}정답`)
+                            setFirst(Math.ceil(Math.random()*9))
+                            setSecond(Math.ceil(Math.random()*9))
+                            setValue('')
+                    }else{
+                        setResult(`${value}오답`)
+                        setValue('')
+                    }
+                }
+
+                const onChange=(e)=>{
+                    setValue(e.target.value)
+                }
+                console.log("render")
+                return (
+                    // id는 그대로 쓸 수 있으나 class는 className, for은 htmlFor로 써야한다.
+                    <div>
+                        <div>{first}X{second}=?</div> 
+                        <form onSubmit={onSubmit}>
+                            <input ref={inputRef} type="Number" value={value} onChange={onChange}></input>
+                            <button type="submit">
+                            입력
+                            </button>
+                        </form>
+                        <div>{result}</div>
+                    </div>
+                )
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render((
+                <React.Fragment>
+                    <Gugudan/>
+                </React.Fragment>
+                ),document.querySelector("#root"))
+        </script>
+    </body>
+</html>
