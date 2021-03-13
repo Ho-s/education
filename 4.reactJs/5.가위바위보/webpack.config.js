@@ -40,4 +40,8 @@ module.exports={
         path:path.join(__dirname,'dist'),
         filename:'app.js'
     }, 
+    devServer:{
+        historyApiFallback:true,
+        hot:true,
+    }
 }
