@@ -2,6 +2,7 @@ import React from 'react';
 import Tr from './Tr';
 
 const Table = ({ tableData, dispatch }) => {
+    console.log(tableData.length)
     return (
         <table>
             <tbody>
