@@ -42,7 +42,6 @@
 ![image](https://user-images.githubusercontent.com/71132893/111434697-2fd55200-8743-11eb-89fb-b2f0b168e446.png)
 ![image](https://user-images.githubusercontent.com/71132893/111434715-3794f680-8743-11eb-8d26-8fdeca70b4d7.png)
 ![image](https://user-images.githubusercontent.com/71132893/111434736-3fed3180-8743-11eb-87fc-6a30d2b6583b.png)
-![image](https://user-images.githubusercontent.com/71132893/111434756-45e31280-8743-11eb-80ce-e8731b862467.png)
 
 # 네트워크
 ![image](https://user-images.githubusercontent.com/71132893/111434796-51363e00-8743-11eb-8c4f-2a635299c6aa.png)
